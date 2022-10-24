@@ -1,4 +1,4 @@
-package ru.lanit.at.pages;
+package ru.lanit.at.pages.examples;
 
 import com.codeborne.selenide.SelenideElement;
 import ru.lanit.at.utils.web.annotations.Name;

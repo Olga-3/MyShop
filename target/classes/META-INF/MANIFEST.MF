@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: Maven Jar Plugin 3.2.0
+Build-Jdk-Spec: 11
+Specification-Title: Cucumber-JVM: TestNG
+Specification-Version: 7.2
+Implementation-Title: Cucumber-JVM: TestNG
+Implementation-Version: 7.2.3
+Automatic-Module-Name: io.cucumber.testng
+
