@@ -1,4 +1,4 @@
-package ru.lanit.at.pages;
+package ru.lanit.at.pages.myshop;
 
 import com.codeborne.selenide.SelenideElement;
 import ru.lanit.at.utils.web.annotations.Name;
@@ -7,7 +7,7 @@ import ru.lanit.at.utils.web.pagecontext.WebPage;
 import static com.codeborne.selenide.Selenide.$x;
 
 @Name(value = "шапка и подвал сайта")
-public class MyShopHeaderAndFooter extends WebPage {
+public class HeaderAndFooter extends WebPage {
 
     @Name("ссылка 'Вход'")
     public SelenideElement authorizeButton = $x("//span[text()='Вход']");
@@ -30,4 +30,7 @@ public class MyShopHeaderAndFooter extends WebPage {
     @Name("Учебники для школы")
     public SelenideElement linkExerciseBooksForSchool = $x("//a[contains(text(),'Учебники для школы')]");
 
+    // для временного шага - для закрытия всплывающего окна, которое блокирует доступ к элементам
+    @Name("крестик для закрытия окна о розыгрыше")
+    public SelenideElement exitButtonRaffle = $x("//div[@class='md-modal__closed']");
 }

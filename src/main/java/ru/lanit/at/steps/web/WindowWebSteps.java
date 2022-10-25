@@ -15,8 +15,8 @@ import ru.lanit.at.utils.web.pagecontext.PageManager;
 import ru.lanit.at.utils.web.pagecontext.WebPage;
 
 public class WindowWebSteps extends AbstractWebSteps {
-    private PageManager pageManager;
-    private final Logger LOGGER = LoggerFactory.getLogger(WindowWebSteps.class);
+//    private PageManager pageManager;
+//    private final Logger LOGGER = LoggerFactory.getLogger(WindowWebSteps.class);
 
     public WindowWebSteps(PageManager pageManager) {
         super(pageManager);
@@ -96,6 +96,7 @@ public class WindowWebSteps extends AbstractWebSteps {
      * @param pageName наименование страницы
      */
     @Если("пользователь на странице {string}")
+    @Если("инициализировать страницу {string}")
     @Когда("инициализация страницы {string}")
     @И("переход на страницу {string}")
 
@@ -105,48 +106,48 @@ public class WindowWebSteps extends AbstractWebSteps {
     }
 
 
-    /**
-     * действие обозначает, что мы находимся на странице,
-     * где описаны элементы шапки и подвала сайта.
-     * нужно использовать этот шаг, чтобы работать далее с этими элементами
-     */
-    @Если("инициализировать страницу: шапка и подвал сайта")
-    public void setPageMyShopHeaderAndFooter() {
-        WebPage page = Environment.getPage("шапка и подвал сайта");
-        pageManager.setCurrentPage(page);
-    }
-
-    /**
-     * действие обозначает, что мы находимся на странице,
-     * где описаны элементы страницы - карточки товара.
-     * нужно использовать этот шаг, чтобы работать далее с этими элементами
-     */
-    @Если("инициализировать страницу: страница товара")
-    public void setPageMyShopProductPage() {
-        WebPage page = Environment.getPage("страница товара");
-        pageManager.setCurrentPage(page);
-    }
-
-    /**
-     * действие обозначает, что мы находимся на странице,
-     * где описаны элементы модального окна личного кабинета
-     * (меню, которое открывается по клику на "Мой кабинет").
-     * нужно использовать этот шаг, чтобы работать далее с этими элементами
-     */
-    @Если("инициализировать страницу: модальное окно ЛК")
-    public void setPageMyShopMyCabinetModalWindow() {
-        WebPage page = Environment.getPage("модальное окно ЛК");
-        pageManager.setCurrentPage(page);
-    }
-
-    /**
-     * действие обозначает, что мы находимся на странице,
-     * где описаны элементы формы авторизации и регистрации.
-     * нужно использовать этот шаг, чтобы работать далее с этими элементами
-     */
-    @Если("инициализировать страницу: форма авторизации и регистрации")
-    public void setPageMyShopLoginWindow() {
-        WebPage page = Environment.getPage("форма авторизации и регистрации");
-        pageManager.setCurrentPage(page);
-    }
+//    /**
+//     * действие обозначает, что мы находимся на странице,
+//     * где описаны элементы шапки и подвала сайта.
+//     * нужно использовать этот шаг, чтобы работать далее с этими элементами
+//     */
+//    @Если("инициализировать страницу: шапка и подвал сайта")
+//    public void setPageMyShopHeaderAndFooter() {
+//        WebPage page = Environment.getPage("шапка и подвал сайта");
+//        pageManager.setCurrentPage(page);
+//    }
+//
+//    /**
+//     * действие обозначает, что мы находимся на странице,
+//     * где описаны элементы страницы - карточки товара.
+//     * нужно использовать этот шаг, чтобы работать далее с этими элементами
+//     */
+//    @Если("инициализировать страницу: страница товара")
+//    public void setPageMyShopProductPage() {
+//        WebPage page = Environment.getPage("страница товара");
+//        pageManager.setCurrentPage(page);
+//    }
+//
+//    /**
+//     * действие обозначает, что мы находимся на странице,
+//     * где описаны элементы модального окна личного кабинета
+//     * (меню, которое открывается по клику на "Мой кабинет").
+//     * нужно использовать этот шаг, чтобы работать далее с этими элементами
+//     */
+//    @Если("инициализировать страницу: модальное окно ЛК")
+//    public void setPageMyShopMyCabinetModalWindow() {
+//        WebPage page = Environment.getPage("модальное окно ЛК");
+//        pageManager.setCurrentPage(page);
+//    }
+//
+//    /**
+//     * действие обозначает, что мы находимся на странице,
+//     * где описаны элементы формы авторизации и регистрации.
+//     * нужно использовать этот шаг, чтобы работать далее с этими элементами
+//     */
+//    @Если("инициализировать страницу: форма авторизации и регистрации")
+//    public void setPageMyShopLoginWindow() {
+//        WebPage page = Environment.getPage("форма авторизации и регистрации");
+//        pageManager.setCurrentPage(page);
+//    }
 }

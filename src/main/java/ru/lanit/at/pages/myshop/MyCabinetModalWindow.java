@@ -1,4 +1,4 @@
-package ru.lanit.at.pages;
+package ru.lanit.at.pages.myshop;
 
 import com.codeborne.selenide.SelenideElement;
 import ru.lanit.at.utils.web.annotations.Name;
@@ -7,7 +7,7 @@ import ru.lanit.at.utils.web.pagecontext.WebPage;
 import static com.codeborne.selenide.Selenide.$x;
 
 @Name(value = "модальное окно ЛК")
-public class MyShopMyCabinetModalWindow extends WebPage {
+public class MyCabinetModalWindow extends WebPage {
 
     @Name("заголовок 'Мой кабинет' в модальном окне ЛК")
     public SelenideElement HeaderMyCabinet = $x("//div[@class='md-header']/div/span[contains(text(),'Мой кабинет')]");

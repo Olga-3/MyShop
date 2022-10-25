@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import ru.lanit.at.actions.WebActions;
 import ru.lanit.at.utils.DataGenerator;
 import ru.lanit.at.utils.Sleep;
+import ru.lanit.at.utils.selenide.DriverManager;
 import ru.lanit.at.utils.web.pagecontext.Environment;
 import ru.lanit.at.utils.web.pagecontext.PageManager;
 import ru.lanit.at.utils.web.pagecontext.WebPage;
@@ -166,7 +167,8 @@ public class WebActionWebSteps extends AbstractWebSteps {
      */
     @Если("открыть сайт my-shop.ru")
     public void openMyShopUrl() {
-//        new WindowWebSteps().open("https://my-shop.ru/");
+        DriverManager.startDriver();
+        Selenide.open("https://my-shop.ru/");
     }
 
     /**
@@ -206,7 +208,7 @@ public class WebActionWebSteps extends AbstractWebSteps {
         DataGenerator dataGenerator = new DataGenerator();
         String generated = dataGenerator.generateValueByMask("EEDEDEDEDEDEDEDEDEDEDEDDEDEDEDE");
         String readyEmail = generated + "@test.ru";
-        //LOGGER.info("Generated e-mail: " + readyEmail);
+//        LOGGER.info("Generated e-mail: " + readyEmail);
         return readyEmail;
     }
 

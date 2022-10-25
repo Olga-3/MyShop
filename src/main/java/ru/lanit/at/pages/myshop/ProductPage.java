@@ -1,4 +1,4 @@
-package ru.lanit.at.pages;
+package ru.lanit.at.pages.myshop;
 
 import com.codeborne.selenide.SelenideElement;
 import ru.lanit.at.utils.web.annotations.Name;
@@ -7,7 +7,7 @@ import ru.lanit.at.utils.web.pagecontext.WebPage;
 import static com.codeborne.selenide.Selenide.$x;
 
 @Name(value = "страница товара")
-public class MyShopProductPage extends WebPage {
+public class ProductPage extends WebPage {
 
     @Name("кнопка 'В корзину'")
     public SelenideElement authorizeButton = $x("//button[text()='В корзину']");
